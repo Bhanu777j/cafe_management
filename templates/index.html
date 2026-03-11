@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Management</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="nav-1">
+          <div class="logo">Bhanu's Feast</div>
+
+          <ul class="links">
+            <li>Home</li>
+            <li>Menu</li>
+            <li>About</li>
+            <li>Location</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        <div class="icons">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="left">
+          <span class="left1">Are You Hungry?</span>
+          <span class="left2">Don't Wait</span>
+          <span class="left3">Let start to order food now</span>
+
+          <a href="#menu" class="left4">Check out Menu</a>
+        </div>
+
+        <div class="food" id="food"></div>
+      </div>
+
+      <div class="items">
+        <div id="food1"></div>
+        <div id="food2"></div>
+        <div id="food3"></div>
+        <div id="food4"></div>
+      </div>
+
+      <!-- ORDER SECTION -->
+
+      <div class="order-section" id="menu">
+        <h2>Select Your Food</h2>
+
+        <form action="/order" method="POST">
+          <div class="item-grid">
+            <!-- Burger -->
+            <div class="item">
+              <div class="food-img item1"></div>
+              <div class="food-info">
+                <p>
+                  <span class="food-name">Burger</span> -
+                  <span class="price">₹120</span>
+                </p>
+                <div class="order-controls">
+                  <input type="checkbox" name="items" value="1" />
+                  <input
+                    type="number"
+                    name="qty_1"
+                    min="1"
+                    value="1"
+                    class="qty"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Pizza -->
+            <div class="item">
+              <div class="food-img item2"></div>
+              <div class="food-info">
+                <p>
+                  <span class="food-name">Pizza</span> -
+                  <span class="price">₹250</span>
+                </p>
+                <div class="order-controls">
+                  <input type="checkbox" name="items" value="2" />
+                  <input
+                    type="number"
+                    name="qty_2"
+                    min="1"
+                    value="1"
+                    class="qty"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Biryani -->
+            <div class="item">
+              <div class="food-img item3"></div>
+              <div class="food-info">
+                <p>
+                  <span class="food-name">Biryani</span> -
+                  <span class="price">₹180</span>
+                </p>
+                <div class="order-controls">
+                  <input type="checkbox" name="items" value="3" />
+                  <input
+                    type="number"
+                    name="qty_3"
+                    min="1"
+                    value="1"
+                    class="qty"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Pasta -->
+            <div class="item">
+              <div class="food-img item4"></div>
+              <div class="food-info">
+                <p>
+                  <span class="food-name">Pasta</span> -
+                  <span class="price">₹150</span>
+                </p>
+                <div class="order-controls">
+                  <input type="checkbox" name="items" value="4" />
+                  <input
+                    type="number"
+                    name="qty_4"
+                    min="1"
+                    value="1"
+                    class="qty"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Noodles -->
+            <div class="item">
+              <div class="food-img item5"></div>
+              <div class="food-info">
+                <p>
+                  <span class="food-name">Noodles</span> -
+                  <span class="price">₹130</span>
+                </p>
+                <div class="order-controls">
+                  <input type="checkbox" name="items" value="5" />
+                  <input
+                    type="number"
+                    name="qty_5"
+                    min="1"
+                    value="1"
+                    class="qty"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Sandwich -->
+            <div class="item">
+              <div class="food-img item6"></div>
+              <div class="food-info">
+                <p>
+                  <span class="food-name">Sandwich</span> -
+                  <span class="price">₹90</span>
+                </p>
+                <div class="order-controls">
+                  <input type="checkbox" name="items" value="6" />
+                  <input
+                    type="number"
+                    name="qty_6"
+                    min="1"
+                    value="1"
+                    class="qty"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Chicken Roll -->
+            <div class="item">
+              <div class="food-img item7"></div>
+              <div class="food-info">
+                <p>
+                  <span class="food-name">Chicken Roll</span> -
+                  <span class="price">₹160</span>
+                </p>
+                <div class="order-controls">
+                  <input type="checkbox" name="items" value="7" />
+                  <input
+                    type="number"
+                    name="qty_7"
+                    min="1"
+                    value="1"
+                    class="qty"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Ice Cream -->
+            <div class="item">
+              <div class="food-img item8"></div>
+              <div class="food-info">
+                <p>
+                  <span class="food-name">Ice Cream</span> -
+                  <span class="price">₹80</span>
+                </p>
+                <div class="order-controls">
+                  <input type="checkbox" name="items" value="8" />
+                  <input
+                    type="number"
+                    name="qty_8"
+                    min="1"
+                    value="1"
+                    class="qty"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Soft Drink -->
+            <div class="item">
+              <div class="food-img item9"></div>
+              <div class="food-info">
+                <p>
+                  <span class="food-name">Soft Drink</span> -
+                  <span class="price">₹100</span>
+                </p>
+                <div class="order-controls">
+                  <input type="checkbox" name="items" value="9" />
+                  <input
+                    type="number"
+                    name="qty_9"
+                    min="1"
+                    value="1"
+                    class="qty"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br />
+          <button type="submit">Order Now</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Company</h3>
+          <p>About Us</p>
+          <p>Contact Us</p>
+          <p>Reservation</p>
+          <p>Privacy Policy</p>
+          <p>Terms & Condition</p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Contact</h3>
+
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            7 Street, Palakollu, INDIA
+          </p>
+
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 987654321
+          </p>
+
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+            bhanujp777@gmail.com
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Opening</h3>
+
+          <p>Monday - Saturday</p>
+          <p>09AM - 09PM</p>
+
+          <p>Sunday</p>
+          <p>10AM - 08PM</p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Newsletter</h3>
+
+          <p>Enter your email to subscribe</p>
+
+          <input type="email" placeholder="Your email" />
+
+          <button>Signup</button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Bhanu's Feast | All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
