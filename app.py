@@ -7,7 +7,7 @@ app = Flask(__name__)
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Bhanu@4544",
+    password="your_password",
     database="cafe_db"
 )
 
@@ -75,4 +75,5 @@ def order():
 
 
 if __name__ == "__main__":
+
     app.run(debug=True)
