@@ -18,10 +18,10 @@ This is a simple restaurant ordering web application.
 ## Run the Project
 
 1. Install requirements
-pip install -r requirements.txt
+  -pip install -r requirements.txt
 
 2. Run the application
-python app.py
+  -python app.py
 
 3. Open in browser
-http://127.0.0.1:5000
+  -http://127.0.0.1:5000
