@@ -14,21 +14,6 @@ This is a simple restaurant ordering web application.
 - Enter quantity
 - Bill calculation
 - Stores order data in MySQL database
-  
-## Project Structure
-cafe_management
-│
-├── app.py
-├── requirements.txt
-├── static
-│   ├── style.css
-│   ├── back7.jpg
-│   ├── food.jpg
-│   └── item images
-│
-└── templates
-    ├── index.html
-    └── bill.html
 
 ## Run the Project
 
